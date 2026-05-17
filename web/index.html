@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Process Intelligence</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Process Intelligence V0.2</p>
+          <h1>流程、碳排、图谱与优化建议闭环工作台</h1>
+          <p class="subtitle">上传事件日志，映射字段，调整碳排因子，并生成可追溯的低碳优化报告。</p>
+        </div>
+        <button id="runPipeline" class="primary-button">运行分析</button>
+      </header>
+
+      <section class="control-grid">
+        <article class="panel compact">
+          <div class="panel-heading"><h2>数据上传</h2><span id="uploadStatus">使用示例数据</span></div>
+          <input id="csvFile" type="file" accept=".csv,text/csv" />
+          <button id="uploadButton" class="secondary-button">上传 CSV</button>
+          <div id="previewTable" class="preview-table"></div>
+        </article>
+
+        <article class="panel compact">
+          <div class="panel-heading"><h2>字段映射</h2><span>7 个字段</span></div>
+          <div id="mappingControls" class="field-grid"></div>
+        </article>
+
+        <article class="panel compact">
+          <div class="panel-heading"><h2>碳排因子</h2><span>可编辑</span></div>
+          <label>电力 kgCO2e/kWh<input id="electricityFactor" type="number" step="0.001" value="0.581" /></label>
+          <label>物料 kgCO2e/kg<input id="materialFactor" type="number" step="0.01" value="1.82" /></label>
+        </article>
+      </section>
+
+      <section class="summary-grid">
+        <article class="metric-card"><p>事件数</p><strong id="eventsMetric">-</strong></article>
+        <article class="metric-card"><p>案例数</p><strong id="casesMetric">-</strong></article>
+        <article class="metric-card"><p>总碳排</p><strong id="carbonMetric">-</strong></article>
+        <article class="metric-card"><p>预计节省</p><strong id="savingMetric">-</strong></article>
+      </section>
+
+      <section class="content-grid">
+        <article class="panel wide">
+          <div class="panel-heading"><h2>流程挖掘结果</h2><span id="sourceFile">等待运行</span></div>
+          <div class="split">
+            <div><h3>直接跟随关系</h3><div id="processEdges" class="list"></div></div>
+            <div><h3>活动时长瓶颈</h3><div id="bottlenecks" class="list"></div></div>
+          </div>
+        </article>
+
+        <article class="panel"><div class="panel-heading"><h2>活动碳排排行</h2></div><div id="carbonBars" class="bar-list"></div></article>
+
+        <article class="panel">
+          <div class="panel-heading"><h2>知识图谱</h2><span id="graphSchema">-</span></div>
+          <div class="toolbar">
+            <select id="graphKind"><option value="">全部</option><option value="activity">活动</option><option value="resource">资源</option><option value="metric">指标</option></select>
+            <input id="graphQuery" type="search" placeholder="查询节点" />
+            <button id="queryGraph" class="icon-button">查</button>
+            <button id="exportCypher" class="icon-button">Cypher</button>
+          </div>
+          <div id="graphPreview" class="graph-preview"></div>
+        </article>
+
+        <article class="panel wide">
+          <div class="panel-heading"><h2>优化建议与报告</h2><span id="objective">-</span></div>
+          <div id="recommendations" class="recommendations"></div>
+          <pre id="reportView" class="report-view"></pre>
+        </article>
+
+        <article class="panel wide">
+          <div class="panel-heading"><h2>运行历史</h2><span>最近 20 次</span></div>
+          <div id="runHistory" class="history-list"></div>
+        </article>
+      </section>
+    </main>
+
+    <script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+    <script src="/app.js"></script>
+  </body>
+</html>

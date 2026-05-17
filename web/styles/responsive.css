@@ -1,0 +1,45 @@
+@media (max-width: 920px) {
+  .shell {
+    width: min(100% - 28px, 760px);
+  }
+
+  .topbar,
+  .split,
+  .content-grid,
+  .control-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar {
+    display: grid;
+  }
+
+  .workflow,
+  .summary-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .workflow,
+  .summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar {
+    padding: 22px;
+  }
+
+  .recommendation {
+    grid-template-columns: 1fr;
+  }
+
+  .field-grid,
+  .toolbar {
+    grid-template-columns: 1fr;
+  }
+
+  .saving {
+    text-align: left;
+  }
+}

@@ -1,0 +1,25 @@
+case_id,activity,timestamp,resource,energy_kwh,material_kg,device
+ORD-001,Cutting,2026-01-05 08:10:00,CNC-01,12.4,4.1,Cutter A
+ORD-001,Assembly,2026-01-05 09:20:00,LINE-02,18.7,6.5,Assembly Line 2
+ORD-001,Inspection,2026-01-05 10:05:00,QC-01,4.8,0.2,Inspection Bench
+ORD-001,Rework,2026-01-05 11:00:00,LINE-02,9.2,1.7,Assembly Line 2
+ORD-001,Packaging,2026-01-05 12:10:00,PACK-01,6.0,2.4,Pack Station
+ORD-002,Cutting,2026-01-05 08:35:00,CNC-01,11.8,3.9,Cutter A
+ORD-002,Assembly,2026-01-05 09:55:00,LINE-03,15.2,5.8,Assembly Line 3
+ORD-002,Inspection,2026-01-05 10:40:00,QC-01,4.5,0.3,Inspection Bench
+ORD-002,Packaging,2026-01-05 11:20:00,PACK-01,5.7,2.1,Pack Station
+ORD-003,Cutting,2026-01-05 09:00:00,CNC-02,10.9,3.6,Cutter B
+ORD-003,Assembly,2026-01-05 10:15:00,LINE-02,19.4,6.7,Assembly Line 2
+ORD-003,Inspection,2026-01-05 11:30:00,QC-02,5.1,0.4,Inspection Bench
+ORD-003,Rework,2026-01-05 12:05:00,LINE-02,8.8,1.3,Assembly Line 2
+ORD-003,Inspection,2026-01-05 13:00:00,QC-02,4.9,0.2,Inspection Bench
+ORD-003,Packaging,2026-01-05 13:35:00,PACK-01,6.3,2.2,Pack Station
+ORD-004,Cutting,2026-01-05 09:25:00,CNC-02,10.6,3.7,Cutter B
+ORD-004,Assembly,2026-01-05 10:30:00,LINE-03,14.9,5.5,Assembly Line 3
+ORD-004,Inspection,2026-01-05 11:10:00,QC-01,4.4,0.2,Inspection Bench
+ORD-004,Packaging,2026-01-05 11:55:00,PACK-02,5.2,2.0,Pack Station
+ORD-005,Cutting,2026-01-05 10:00:00,CNC-01,12.9,4.4,Cutter A
+ORD-005,Assembly,2026-01-05 11:25:00,LINE-02,20.1,7.0,Assembly Line 2
+ORD-005,Inspection,2026-01-05 12:20:00,QC-01,5.0,0.3,Inspection Bench
+ORD-005,Rework,2026-01-05 13:05:00,LINE-02,9.5,1.8,Assembly Line 2
+ORD-005,Packaging,2026-01-05 14:10:00,PACK-02,6.6,2.5,Pack Station
